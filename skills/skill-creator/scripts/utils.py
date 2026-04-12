@@ -1,12 +1,24 @@
 """Shared utilities for skill-creator scripts."""
 
+import shutil
 from pathlib import Path
+
+
+def resolve_claude_executable() -> str:
+    """Return absolute path to the Claude Code CLI (Windows needs .cmd resolved for subprocess)."""
+    for candidate in ("claude", "claude.cmd", "claude.exe"):
+        found = shutil.which(candidate)
+        if found:
+            return found
+    raise FileNotFoundError(
+        "claude CLI not found on PATH. Install Claude Code and ensure `claude` is available."
+    )
 
 
 
 def parse_skill_md(skill_path: Path) -> tuple[str, str, str]:
     """Parse a SKILL.md file, returning (name, description, full_content)."""
-    content = (skill_path / "SKILL.md").read_text()
+    content = (skill_path / "SKILL.md").read_text(encoding="utf-8")
     lines = content.split("\n")
 
     if lines[0].strip() != "---":

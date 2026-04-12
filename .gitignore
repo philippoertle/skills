@@ -6,3 +6,6 @@ __pycache__/
 # Installed copies for Cursor (run tools/install-cursor-skills.*)
 .cursor/skills/
 
+# Ephemeral command stubs from skill-creator run_eval / run_loop (Claude Code)
+.claude/commands/
+

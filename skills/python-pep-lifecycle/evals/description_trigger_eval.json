@@ -1,0 +1,22 @@
+[
+  {"query": "We're about to cut v2.1.0 of our internal analytics SDK. Can you walk through bumping the version in pyproject.toml, making sure the specifier follows PEP 440, and double-check PEP 621 fields before I tag?", "should_trigger": true},
+  {"query": "The security team wants py.typed and inline annotations on our public API before we publish to PyPI—what PEPs govern that and how should we structure the package?", "should_trigger": true},
+  {"query": "I'm getting pushback in code review that my try/except chains don't attach notes the reviewer can grep—can you align error handling with current PEP guidance and show a before/after?", "should_trigger": true},
+  {"query": "Our CI runs Ruff but a new hire keeps citing random blog posts for style. I want a single canonical doc path: everything should defer to PEP 8 and PEP 257 for this repo—help me write the team rule.", "should_trigger": true},
+  {"query": "We need editable installs for local dev (`pip install -e .`) but also reproducible sdist/wheel in CI—which PEPs define the build backend and pyproject layout we should follow?", "should_trigger": true},
+  {"query": "I'm adding TypedDict and Protocol usage across our FastAPI service; before I refactor, which typing PEPs on peps.python.org should I skim so we don't paint ourselves into a corner?", "should_trigger": true},
+  {"query": "Release engineer here: after merge to main, what's the PEP-aligned checklist for building artifacts, confirming metadata, and publishing (no guesses from Stack Overflow)?", "should_trigger": true},
+  {"query": "Repo has no tests yet; I want to start with a minimal verify step that still respects how Python packages expose types and docs per PEP—what's a sane first milestone?", "should_trigger": true},
+  {"query": "Can you sanity-check our new library's module layout and docstrings against the official docstring PEP before we open source it next week?", "should_trigger": true},
+  {"query": "I inherited a setup.py-only project; PM wants us 'modern PyPA' without breaking downstream. Map the PEPs that justify migrating to pyproject.toml and the order of operations.", "should_trigger": true},
+  {"query": "Write a fibonacci function in Python and add five LeetCode-style unit tests—nothing about packaging or PEP index.", "should_trigger": false},
+  {"query": "Convert this React dashboard component to use TanStack Query v5; the API client is TypeScript, not Python.", "should_trigger": false},
+  {"query": "Our Kubernetes cluster needs a Helm chart for Redis with persistence; ignore application code.", "should_trigger": false},
+  {"query": "Summarize the differences between PostgreSQL and MySQL JSON operators for our DBAs—no Python.", "should_trigger": false},
+  {"query": "I need catchy marketing copy for a landing page about our AI product; keep it high level.", "should_trigger": false},
+  {"query": "Debug this CSS grid: the third column collapses on Safari mobile only.", "should_trigger": false},
+  {"query": "Explain how to use pandas read_csv with dtype dicts—I'm not asking about PEPs or packaging, just pandas usage.", "should_trigger": false},
+  {"query": "Write a bash script that rsyncs logs from prod to S3—shell only.", "should_trigger": false},
+  {"query": "We're choosing between Vitest and Jest for our monorepo frontend tests; compare them.", "should_trigger": false},
+  {"query": "I want idiomatic Go structs and JSON tags for this API payload—show Go code.", "should_trigger": false}
+]
