@@ -26,6 +26,31 @@ Many skills in this repo are open source (Apache 2.0). We've also included the d
 - [./spec](./spec): The Agent Skills specification
 - [./template](./template): Skill template
 
+## Cursor (IDE)
+
+[Cursor](https://cursor.com) loads skills from each `SKILL.md` under **user** `~/.cursor/skills/<name>/` (all workspaces) or **project** `.cursor/skills/<name>/`. This repository keeps the canonical trees under [`skills/`](./skills); the install scripts copy them into one of those locations.
+
+**Recommended (use in every repository)** — installs into your user folder (`%USERPROFILE%\.cursor\skills` on Windows, `~/.cursor/skills` on macOS/Linux):
+
+**Windows (PowerShell)**
+
+```powershell
+.\tools\install-cursor-skills.ps1
+```
+
+**macOS / Linux (bash)**
+
+```bash
+chmod +x tools/install-cursor-skills.sh
+./tools/install-cursor-skills.sh
+```
+
+**Project-only install** (this repo’s `.cursor/skills`, gitignored): PowerShell `-Project`; shell `--project`. **Empty project folder first**: add `-Clean` / `--clean` (only applies with project scope).
+
+**Skip the template skill**: `-NoTemplate` / `--no-template`
+
+Other skills you already have under `~/.cursor/skills` are left alone; only folders with the same names as this repo are replaced. Re-run after `git pull` to refresh copies.
+
 # Try in Claude Code, Claude.ai, and the API
 
 ## Claude Code

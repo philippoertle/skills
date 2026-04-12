@@ -3,3 +3,6 @@ __pycache__/
 .idea/
 .vscode/
 
+# Installed copies for Cursor (run tools/install-cursor-skills.*)
+.cursor/skills/
+
