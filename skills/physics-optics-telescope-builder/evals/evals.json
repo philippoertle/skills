@@ -1,0 +1,23 @@
+{
+  "skill_name": "physics-optics-telescope-builder",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "I'm a beginner with about $800 and want to see Jupiter's cloud bands and some bright DSOs from my suburban backyard (Bortle 6). Should I aim for a 6\" Newtonian on a Dobsonian mount or a 4\" apo refractor on a photo tripod? Compare light grasp, typical usable magnification range, maintenance, and what I'd feel in the eyepiece on a mediocre seeing night.",
+      "expected_output": "Structured comparison: aperture vs portability, magnification vs exit pupil for both options, collimation vs low maintenance, realistic suburban/seeing caveats.",
+      "files": []
+    },
+    {
+      "id": 1,
+      "prompt": "Design check: achromatic refractor objective EFL 900 mm, diameter 100 mm. I have eyepieces with focal lengths 25 mm, 10 mm, and 6 mm. What are f-number, magnifications, and exit pupil for each eyepiece? Flag any combo that's likely 'empty' magnification for a dark-adapted eye.",
+      "expected_output": "f/9, three magnifications, three exit pupils, brief interpretation (e.g. 6 mm eyepiece may be dim or seeing-limited).",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Explain in two short paragraphs why professional research optical telescopes are almost all reflectors today, and mention one physical limit that hits refractors harder than mirrors at large scale.",
+      "expected_output": "Cost/scaling, chromatic issues for simple lenses, segment mirrors; mention practical size limit for monolithic refractor lenses vs large mirror primaries (Wikipedia-aligned).",
+      "files": []
+    }
+  ]
+}

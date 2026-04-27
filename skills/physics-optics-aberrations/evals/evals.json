@@ -1,0 +1,23 @@
+{
+  "skill_name": "physics-optics-aberrations",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "My machine vision lens is f/2.8, 25 mm focal length. On-axis the dot pattern is tight, but at the corners the spots look like asymmetric comets pointing toward the center. What aberrations should I suspect first, and what are two optical and two setup-level mitigations?",
+      "expected_output": "Coma and possibly astigmatism off-axis; mention field angle, stop position/symmetry, decenter, stopping down tradeoff vs diffraction, sensor alignment.",
+      "files": []
+    },
+    {
+      "id": 1,
+      "prompt": "Explain longitudinal vs lateral chromatic aberration in two sentences each, then say when a monochrome LED removes the issue entirely vs when an apochromat is still worth it.",
+      "expected_output": "Clear axial vs transverse distinction; LED removes chromatic classes for single-wavelength use; apo for broadband small pixels or color imaging.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Why does stopping down improve spherical aberration only up to a point, and what begins to dominate if I keep closing the iris?",
+      "expected_output": "Marginal ray height/angle reduction; eventually diffraction (Airy) limits MTF and spot size.",
+      "files": []
+    }
+  ]
+}

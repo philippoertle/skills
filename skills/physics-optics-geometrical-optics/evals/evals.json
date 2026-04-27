@@ -1,0 +1,23 @@
+{
+  "skill_name": "physics-optics-geometrical-optics",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "A thin converging lens has focal length 12 cm. An object 4 cm tall is placed 18 cm to the left of the lens. Find image position, magnification, image height, and say whether the image is real or virtual and upright or inverted. Show a quick ray sketch idea.",
+      "expected_output": "Numeric image distance using thin-lens equation, magnification, image height, and correct real/virtual and orientation with stated sign convention.",
+      "files": []
+    },
+    {
+      "id": 1,
+      "prompt": "Light in glass (n = 1.52) hits a flat interface with air (n = 1.00) at 50° from the normal (measured in glass). Is there a transmitted ray? If not, explain; if yes, give the angle in air.",
+      "expected_output": "Apply Snell or recognize total internal reflection; compare to critical angle and conclude.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Explain when geometrical optics is a good approximation and name two optical phenomena it does not explain by itself.",
+      "expected_output": "Short-wavelength / feature-size criterion; mention e.g. diffraction and interference or need for physical optics.",
+      "files": []
+    }
+  ]
+}
