@@ -40,6 +40,20 @@ This repository also includes a **five-skill suite** for ideal and real rope–p
 
 **Life safety:** mountaineering-related skills are for **education and force intuition** only. They do not replace qualified instruction, team practice, or local operating procedures.
 
+## LaTeX / TikZ (reusable + Theoretical Minimum)
+
+**Reusable** skills apply to any `.tex` exercise or worksheet; **Theoretical Minimum** skills are thin shims for the `theoretical-minimum` repo (paths under `docs/book1/`, README workflow).
+
+| Layer | Skill | Role |
+|-------|-------|------|
+| Reusable | [latex-tikz](./skills/latex-tikz/) | TikZ/PGF diagrams, libraries, compile passes |
+| Reusable | [latex-pdflatex-build](./skills/latex-pdflatex-build/) | `pdflatex` flags, output directory, second pass |
+| Reusable | [latex-framed-blocks-footnotes](./skills/latex-framed-blocks-footnotes/) | Footnote-safe colored blocks, display-math rules |
+| Book 1 shim | [theoretical-minimum-tex-exercise-style](./skills/theoretical-minimum-tex-exercise-style/) | Prompt/Result/Example, Book 1 conventions |
+| Book 1 shim | [theoretical-minimum-pdf-build](./skills/theoretical-minimum-pdf-build/) | PDF next to `docs/book1/**/*.tex` |
+| Book 1 shim | [theoretical-minimum-tex-backfill-prompt-footnotes](./skills/theoretical-minimum-tex-backfill-prompt-footnotes/) | Migrate older Book 1 box macros |
+| Orchestration | [theoretical-minimum-book1-exercise-orchestrator](./skills/theoretical-minimum-book1-exercise-orchestrator/) | Ordered lifecycle for one exercise |
+
 ## Cursor (IDE)
 
 [Cursor](https://cursor.com) loads skills from each `SKILL.md` under **user** `~/.cursor/skills/<name>/` (all workspaces) or **project** `.cursor/skills/<name>/`. This repository keeps the canonical trees under [`skills/`](./skills); the install scripts copy them into one of those locations.

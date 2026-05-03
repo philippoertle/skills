@@ -1,6 +1,6 @@
 ---
 name: theoretical-minimum-add-exercise
-description: Adds or extends a Theoretical Minimum book exercise across TeX/PDF docs, optional Python in src/theoretical_minimum, pytest tests, README written-solution links, and TikZ figures where they clarify the physics. Use when the user asks to solve, add, or mirror a lecture or interlude exercise in the theoretical-minimum repo; use latex-tikz with TeX phases.
+description: Adds or extends a Theoretical Minimum book exercise across TeX/PDF docs, optional Python in src/theoretical_minimum, pytest tests, README written-solution links, and TikZ figures where they clarify the physics. Use when the user asks to solve, add, or mirror a lecture or interlude exercise in the theoretical-minimum repo; use latex-framed-blocks-footnotes, latex-pdflatex-build, latex-tikz, and theoretical-minimum-tex-exercise-style during TeX phases.
 disable-model-invocation: true
 ---
 
@@ -52,10 +52,11 @@ Match existing bullets: **Book 1, Lecture M, …** — [Title (PDF)](docs/...pdf
 
 ## Deeper conventions
 
-- TikZ / PGF figures: see skill **`latex-tikz`** (use proactively with TeX per **`theoretical-minimum-tex-exercise-style`**).
-- TeX layout, colored boxes, footnotes in prompts: see skill **`theoretical-minimum-tex-exercise-style`**.
-- Older TeX missing `footnote` + `savenotes` on colored boxes: **`theoretical-minimum-tex-backfill-prompt-footnotes`**.
-- `pdflatex` invocation: **`theoretical-minimum-pdf-build`**.
+- TikZ / PGF figures: **`latex-tikz`** (use proactively with TeX per **`theoretical-minimum-tex-exercise-style`**).
+- Framed blocks + footnotes (generic): **`latex-framed-blocks-footnotes`**.
+- Book 1 TeX layout and paths: **`theoretical-minimum-tex-exercise-style`**.
+- Older TeX missing `footnote` + `savenotes` on colored boxes: **`theoretical-minimum-tex-backfill-prompt-footnotes`** (applies **`latex-framed-blocks-footnotes`** in `docs/book1/`).
+- `pdflatex` (generic): **`latex-pdflatex-build`**; repo-scoped wrapper: **`theoretical-minimum-pdf-build`**.
 - Strict typing, pytest, ruff: **`theoretical-minimum-exercise-python-tests`**.
 
 ## Where this repo lives vs Cursor

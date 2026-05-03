@@ -1,6 +1,6 @@
 ---
 name: theoretical-minimum-exercise-python-tests
-description: Implements strict-typed exercise modules and pytest tests for the theoretical-minimum Python package—imports, docstrings linking TeX/PDF, numeric checks, ruff, mypy. Use when adding or changing src/theoretical_minimum/book1/**/*.py or tests/book1/**/*.py for exercises. Diagrams belong in TeX (latex-tikz + theoretical-minimum-tex-exercise-style), not matplotlib in Python, unless the exercise explicitly requires plotted numerics in code.
+description: Implements strict-typed exercise modules and pytest tests for the theoretical-minimum Python package—imports, docstrings linking TeX/PDF, numeric checks, ruff, mypy. Use when adding or changing src/theoretical_minimum/book1/**/*.py or tests/book1/**/*.py for exercises. Diagrams belong in TeX (latex-tikz, latex-framed-blocks-footnotes, theoretical-minimum-tex-exercise-style), not matplotlib in Python, unless the exercise explicitly requires plotted numerics in code.
 disable-model-invocation: true
 ---
 
@@ -41,4 +41,4 @@ python -m mypy src/theoretical_minimum/book1/<path-to-file>.py
 
 ## Diagrams
 
-Put explanatory figures in the **TeX** write-up using **`latex-tikz`** (with **`theoretical-minimum-tex-exercise-style`**); do not add matplotlib or similar purely for “a picture” in Python unless the exercise specification requires computed plots in code.
+Put explanatory figures in the **TeX** write-up using **`latex-tikz`** with **`latex-framed-blocks-footnotes`** and **`theoretical-minimum-tex-exercise-style`** as applicable; do not add matplotlib or similar purely for “a picture” in Python unless the exercise specification requires computed plots in code.

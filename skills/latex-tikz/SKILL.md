@@ -48,7 +48,7 @@ Fuller tables and copy-paste snippets: [references/tikz-libraries-and-patterns.m
 
 ## Interaction with colored boxes and footnotes
 
-In exercises that wrap colored `\parbox` blocks with `savenotes` (see **`theoretical-minimum-tex-exercise-style`**), keep **footnotes** on running text outside nested `minipage`-like content when possible. A `\begin{tikzpicture}...\end{tikzpicture}` inside a box is usually fine; `\footnote` **inside** TikZ nodes is fragile—use `\footnotemark` / `\footnotetext` or place the note on the preceding line.
+In exercise layouts that wrap colored `\parbox` blocks with `savenotes` (see **`latex-framed-blocks-footnotes`** and, for Book 1, **`theoretical-minimum-tex-exercise-style`**), keep **footnotes** on running text outside nested `minipage`-like content when possible. A `\begin{tikzpicture}...\end{tikzpicture}` inside a box is usually fine; `\footnote` **inside** TikZ nodes is fragile—use `\footnotemark` / `\footnotetext` or place the note on the preceding line.
 
 ## Compile passes
 
@@ -62,5 +62,7 @@ Simple TikZ: one `pdflatex` pass is enough. References to `\label` inside TikZ w
 
 ## Related skills
 
-- **`theoretical-minimum-tex-exercise-style`** — preamble and Prompt/Result/Example boxes for Book 1 exercises.
-- **`theoretical-minimum-pdf-build`** — `pdflatex` invocation after TikZ edits.
+- **`latex-framed-blocks-footnotes`** — footnote-safe colored blocks and display-math footnote rules (any exercise-style `.tex`).
+- **`latex-pdflatex-build`** — `pdflatex` flags, output directory, multi-pass when the log requires it.
+- **`theoretical-minimum-tex-exercise-style`** — Book 1 paths under `docs/book1/` and repo-specific box conventions.
+- **`theoretical-minimum-pdf-build`** — same as `latex-pdflatex-build` scoped to that repo’s exercise PDF layout.
