@@ -1,6 +1,6 @@
 ---
 name: theoretical-minimum-pdf-build
-description: Rebuilds exercise PDFs with pdflatex for the theoretical-minimum repo—output directory next to sources, halt-on-error, optional cleanup of aux/log. Use after editing docs/book1/**/*.tex or when the user asks to compile exercise PDFs.
+description: Rebuilds exercise PDFs with pdflatex for the theoretical-minimum repo—output directory next to sources, halt-on-error, optional cleanup of aux/log, including TikZ-heavy sources that may need a second pass. Use after editing docs/book1/**/*.tex or when the user asks to compile exercise PDFs.
 disable-model-invocation: true
 ---
 
@@ -19,6 +19,7 @@ Replace placeholders with the **absolute** path to the exercise directory and th
 ## Practice
 
 - Run **once** unless `hyperref` or TOC warnings ask for a second pass (rare for these short articles).
+- **TikZ:** if the `.log` reports undefined references from `remember picture` / `overlay`, `tikzmark`, or cross-picture `\ref`s, run **`pdflatex` a second time** (same flags). For ordinary inline `tikzpicture` blocks, one pass is usually enough—see **`latex-tikz`**.
 - If the repo does not track `.aux` / `.log`, delete them after a successful build to keep `git status` clean.
 - The canonical artifact for readers is the committed **`exercise-NN.pdf`** alongside **`exercise-NN.tex`**.
 

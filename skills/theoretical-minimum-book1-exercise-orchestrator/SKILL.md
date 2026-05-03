@@ -1,6 +1,6 @@
 ---
 name: theoretical-minimum-book1-exercise-orchestrator
-description: Single entry point for adding or solving a Book 1 exercise in the theoretical-minimum repo—TeX/PDF, README, optional Python and tests—by running one ordered workflow that names prerequisite skills for detail. Use when the user wants one skill for the full exercise lifecycle instead of invoking theoretical-minimum-add-exercise, tex, pdf, python, or backfill skills separately.
+description: Single entry point for adding or solving a Book 1 exercise in the theoretical-minimum repo—TeX/PDF, README, optional Python and tests, plus TikZ diagrams where they help—by running one ordered workflow that names prerequisite skills for detail. Use when the user wants one skill for the full exercise lifecycle instead of invoking theoretical-minimum-add-exercise, tex, pdf, python, or backfill skills separately; load latex-tikz during TeX authoring.
 disable-model-invocation: true
 ---
 
@@ -13,7 +13,8 @@ Use **only this skill** when the user asks to add, solve, or extend a Book 1 exe
 | Order | Skill name | Role |
 |------:|------------|------|
 | 1 | `theoretical-minimum-add-exercise` | Paths, README bullet, overall checklist |
-| 2 | `theoretical-minimum-tex-exercise-style` | Preamble, boxes, footnote style |
+| 2 | `theoretical-minimum-tex-exercise-style` | Preamble, boxes, footnote style; **proactive TikZ** figures when useful |
+| 2b | `latex-tikz` | TikZ/pgf details—load **whenever** authoring or editing `tikzpicture` / diagram TeX in Phase 2 |
 | 3 | `theoretical-minimum-tex-backfill-prompt-footnotes` | Only if the `.tex` predates `footnote` + `savenotes` on colored boxes |
 | 4 | `theoretical-minimum-pdf-build` | `pdflatex` command and hygiene |
 | 5 | `theoretical-minimum-exercise-python-tests` | Only if Python/tests change |
@@ -26,9 +27,9 @@ Use **only this skill** when the user asks to add, solve, or extend a Book 1 exe
 
 ## Phase 2 — TeX body
 
-**Prerequisite:** `theoretical-minimum-tex-exercise-style`.
+**Prerequisites:** `theoretical-minimum-tex-exercise-style` and **`latex-tikz`** (for any diagram: coordinates, vectors, small plots, spacetime sketches—add figures proactively per the TeX style skill).
 
-**Fallback:** Match existing Book 1 articles: `geometry`, `amsmath`/`amssymb`, `fontenc`, `lmodern`, `microtype`, `xcolor`; `\promptbox` / `\resultbox` / `\examplebox`; footnotes for basics; no `\footnote` inside display math.
+**Fallback:** Match existing Book 1 articles: `geometry`, `amsmath`/`amssymb`, `fontenc`, `lmodern`, `microtype`, `xcolor`; `\promptbox` / `\resultbox` / `\examplebox`; footnotes for basics; no `\footnote` inside display math. Use `\usepackage{tikz}` and minimal `\usetikzlibrary{...}` when including `tikzpicture` blocks.
 
 **If footnotes in colored boxes fail in PDF:** apply **`theoretical-minimum-tex-backfill-prompt-footnotes`** (`\usepackage{footnote}` + `\begin{savenotes}` around each box macro, per `docs/book1/lecture-02/exercise-01.tex`).
 
@@ -47,9 +48,10 @@ Use **only this skill** when the user asks to add, solve, or extend a Book 1 exe
 ## Phase 5 — Verify
 
 - [ ] TeX compiles; footnotes visible where used  
+- [ ] Diagrams: if the physics is geometric or relational, a TikZ figure is present or explicitly justified as unnecessary (see **`latex-tikz`**)  
 - [ ] README lists the exercise if new  
 - [ ] Tests and linters pass if Python changed  
 
 ## For maintainers
 
-Keep the five prerequisite skills as the **source of truth** for edge cases; extend this orchestrator only with high-level ordering, not duplicated long procedures.
+Keep the named prerequisite skills (including **`latex-tikz`**) as the **source of truth** for edge cases; extend this orchestrator only with high-level ordering, not duplicated long procedures.

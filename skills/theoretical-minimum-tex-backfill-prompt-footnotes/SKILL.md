@@ -32,3 +32,4 @@ Rebuild PDF per **`theoretical-minimum-pdf-build`**. Re-read the first page to c
 ## Related
 
 - General TeX conventions for new exercises: **`theoretical-minimum-tex-exercise-style`**.
+- TikZ inside colored boxes: keep diagrams in normal `tikzpicture` scopes; avoid `\footnote` inside TikZ nodes—prefer **`latex-tikz`** footnote guidance.

@@ -1,6 +1,6 @@
 ---
 name: theoretical-minimum-add-exercise
-description: Adds or extends a Theoretical Minimum book exercise across TeX/PDF docs, optional Python in src/theoretical_minimum, pytest tests, and README written-solution links. Use when the user asks to solve, add, or mirror a lecture or interlude exercise in the theoretical-minimum repo.
+description: Adds or extends a Theoretical Minimum book exercise across TeX/PDF docs, optional Python in src/theoretical_minimum, pytest tests, README written-solution links, and TikZ figures where they clarify the physics. Use when the user asks to solve, add, or mirror a lecture or interlude exercise in the theoretical-minimum repo; use latex-tikz with TeX phases.
 disable-model-invocation: true
 ---
 
@@ -17,7 +17,7 @@ Applies to the **`theoretical-minimum`** Python package repo: written solutions 
 Copy and track progress:
 
 ```
-- [ ] TeX: docs/book1/<lecture-or-interlude>/exercise-NN.tex
+- [ ] TeX: docs/book1/<lecture-or-interlude>/exercise-NN.tex (include TikZ figures when they clarify geometry or setup—skill `latex-tikz`)
 - [ ] PDF: same folder, exercise-NN.pdf (rebuild after TeX changes)
 - [ ] README: bullet under "## Written solutions" (PDF + TeX links)
 - [ ] Python (if needed): src/theoretical_minimum/book1/.../exercise_NN.py
@@ -52,6 +52,7 @@ Match existing bullets: **Book 1, Lecture M, …** — [Title (PDF)](docs/...pdf
 
 ## Deeper conventions
 
+- TikZ / PGF figures: see skill **`latex-tikz`** (use proactively with TeX per **`theoretical-minimum-tex-exercise-style`**).
 - TeX layout, colored boxes, footnotes in prompts: see skill **`theoretical-minimum-tex-exercise-style`**.
 - Older TeX missing `footnote` + `savenotes` on colored boxes: **`theoretical-minimum-tex-backfill-prompt-footnotes`**.
 - `pdflatex` invocation: **`theoretical-minimum-pdf-build`**.
