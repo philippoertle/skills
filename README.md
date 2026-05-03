@@ -26,6 +26,20 @@ Many skills in this repo are open source (Apache 2.0). We've also included the d
 - [./spec](./spec): The Agent Skills specification
 - [./template](./template): Skill template
 
+## Mechanics, rope systems, and mountaineering
+
+This repository also includes a **five-skill suite** for ideal and real rope–pulley statics, friction and effective mechanical advantage, crevasse-rescue-oriented mechanics (with explicit safety boundaries), numerical simulation notes, and field-style force estimates. They are meant to chain: start from ideal statics, add friction, then apply mountaineering context or simulation as needed.
+
+| Skill | Role |
+|-------|------|
+| [physics-mechanics-rope-pulley-statics](./skills/physics-mechanics-rope-pulley-statics/) | Ideal ropes and pulleys: free-body diagrams, constraints, theoretical MA |
+| [physics-mechanics-rope-friction-real-systems](./skills/physics-mechanics-rope-friction-real-systems/) | Capstan-style and per-bend losses, effective MA |
+| [mountaineering-crevasse-rescue-mechanics](./skills/mountaineering-crevasse-rescue-mechanics/) | Glacier haul topology and vocabulary; not a substitute for formal rescue training |
+| [physics-mechanics-rope-systems-simulation](./skills/physics-mechanics-rope-systems-simulation/) | State variables, constraints, integration, validation |
+| [mountaineering-rope-forces-field-estimation](./skills/mountaineering-rope-forces-field-estimation/) | Anchor resultants and haul-force order-of-magnitude checks |
+
+**Life safety:** mountaineering-related skills are for **education and force intuition** only. They do not replace qualified instruction, team practice, or local operating procedures.
+
 ## Cursor (IDE)
 
 [Cursor](https://cursor.com) loads skills from each `SKILL.md` under **user** `~/.cursor/skills/<name>/` (all workspaces) or **project** `.cursor/skills/<name>/`. This repository keeps the canonical trees under [`skills/`](./skills); the install scripts copy them into one of those locations.
