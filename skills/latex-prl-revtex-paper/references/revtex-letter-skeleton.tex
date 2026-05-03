@@ -1,0 +1,65 @@
+% Minimal PRL-style Letter shell with REVTeX 4.2 (adapt options to your draft stage).
+% Abstract: keep within APS PRL limit (currently <= 600 characters including spaces).
+% Confirm length with https://journals.aps.org/authors/length-guide before submission.
+
+\documentclass[%
+  aps,%
+  prl,%
+  twocolumn,%
+  superscriptaddress,%
+  % preprint,%            % uncomment for wider single-column draft if preferred
+  % showpacs,%           % obsolete in recent REVTeX; use PhySH at submission
+  longbibliography%
+]{revtex4-2}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+
+\title{Your Title: Specific and Searchable}
+
+\author{First Author}
+\affiliation{Department and Institution, City, Country}
+
+\author{Second Author}
+\affiliation{Another Institution, City, Country}
+
+\date{\today}
+
+\begin{abstract}
+Replace with a self-contained abstract under the PRL character limit. No citations or footnotes here.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+State the problem and the main result in language accessible across subfields.
+
+\section{Main text}
+
+Use displayed equations for all but the simplest formulas. Cite with \verb|\cite{...}| and keep the narrative tight for the Letter word limit.
+
+% \begin{figure}[t]
+%   \includegraphics[width=\columnwidth]{your-figure-file}
+%   \caption{Figure caption text may count toward APS length rules---see Length Guide.}
+%   \label{fig:example}
+% \end{figure}
+
+\section{Conclusion}
+
+Summarize impact and outlook.
+
+\begin{acknowledgments}
+Funding and facility acknowledgments (check journal rules for allowed content).
+\end{acknowledgments}
+
+% Provide refs.bib alongside this file.
+\bibliographystyle{apsrev4-2}
+\bibliography{refs}
+
+\end{document}

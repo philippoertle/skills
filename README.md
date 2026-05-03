@@ -54,6 +54,18 @@ This repository also includes a **five-skill suite** for ideal and real rope–p
 | Book 1 shim | [theoretical-minimum-tex-backfill-prompt-footnotes](./skills/theoretical-minimum-tex-backfill-prompt-footnotes/) | Migrate older Book 1 box macros |
 | Orchestration | [theoretical-minimum-book1-exercise-orchestrator](./skills/theoretical-minimum-book1-exercise-orchestrator/) | Ordered lifecycle for one exercise |
 
+## Web literature search
+
+| Skill | Role |
+|-------|------|
+| [literature-web-search-report](./skills/literature-web-search-report/) | Open-web discovery, source triage, and a structured search report (query log + annotated bibliography) |
+
+## APS / Physical Review Letters (LaTeX)
+
+| Skill | Role |
+|-------|------|
+| [latex-prl-revtex-paper](./skills/latex-prl-revtex-paper/) | REVTeX-based PRL Letter markup, limits, abstract rules, official links, minimal skeleton |
+
 ## Cursor (IDE)
 
 [Cursor](https://cursor.com) loads skills from each `SKILL.md` under **user** `~/.cursor/skills/<name>/` (all workspaces) or **project** `.cursor/skills/<name>/`. This repository keeps the canonical trees under [`skills/`](./skills); the install scripts copy them into one of those locations.
